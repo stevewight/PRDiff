@@ -15,6 +15,7 @@
 		AA7A8E7F1F9A798400B8CF40 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E7E1F9A798400B8CF40 /* PullRequest.swift */; };
 		AA7A8E811F9A799C00B8CF40 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E801F9A799C00B8CF40 /* Repo.swift */; };
 		AA7A8E831F9A79C500B8CF40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E821F9A79C500B8CF40 /* User.swift */; };
+		AA7A8E871F9AA41700B8CF40 /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E861F9AA41700B8CF40 /* PullRequestCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AA7A8E7E1F9A798400B8CF40 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 		AA7A8E801F9A799C00B8CF40 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		AA7A8E821F9A79C500B8CF40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AA7A8E861F9AA41700B8CF40 /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		AA7A8E761F9A71DC00B8CF40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA7A8E861F9AA41700B8CF40 /* PullRequestCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7A8E871F9AA41700B8CF40 /* PullRequestCell.swift in Sources */,
 				AA7A8E661F9A6EBF00B8CF40 /* PullRequestsVC.swift in Sources */,
 				AA7A8E7D1F9A77E400B8CF40 /* GithubAPI.swift in Sources */,
 				AA7A8E831F9A79C500B8CF40 /* User.swift in Sources */,
