@@ -58,9 +58,14 @@ extension PullRequestsVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let pullRequest = pullRequests[indexPath.row]
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "PullRequestCell", for: indexPath
         ) as! PullRequestCell
+        
+        cell.titleLabel.text = pullRequest.title
+        cell.numberLabel.text = "#\(pullRequest.number)"
+        cell.userLabel.text = pullRequest.user.login
         
         return cell
     }
