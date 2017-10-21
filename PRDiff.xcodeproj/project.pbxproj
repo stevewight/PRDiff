@@ -20,6 +20,8 @@
 		AA7A8E8B1F9AB03100B8CF40 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8A1F9AB03100B8CF40 /* AvatarImageView.swift */; };
 		AA7A8E8E1F9AC28900B8CF40 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8D1F9AC28900B8CF40 /* UIExtensions.swift */; };
 		AA7A8E901F9AC2F900B8CF40 /* PullRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */; };
+		AAB370EE1F9BB829004E823E /* DiffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370ED1F9BB829004E823E /* DiffVC.swift */; };
+		AAB370F01F9BBB40004E823E /* DiffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370EF1F9BBB40004E823E /* DiffCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		AA7A8E8A1F9AB03100B8CF40 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		AA7A8E8D1F9AC28900B8CF40 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestVM.swift; sourceTree = "<group>"; };
+		AAB370ED1F9BB829004E823E /* DiffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffVC.swift; sourceTree = "<group>"; };
+		AAB370EF1F9BBB40004E823E /* DiffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				AA7A8E861F9AA41700B8CF40 /* PullRequestCell.swift */,
 				AA7A8E881F9AAF1500B8CF40 /* PullRequestStack.swift */,
 				AA7A8E8A1F9AB03100B8CF40 /* AvatarImageView.swift */,
+				AAB370EF1F9BBB40004E823E /* DiffCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AA7A8E651F9A6EBF00B8CF40 /* PullRequestsVC.swift */,
+				AAB370ED1F9BB829004E823E /* DiffVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,11 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB370F01F9BBB40004E823E /* DiffCell.swift in Sources */,
 				AA7A8E901F9AC2F900B8CF40 /* PullRequestVM.swift in Sources */,
 				AA7A8E8B1F9AB03100B8CF40 /* AvatarImageView.swift in Sources */,
 				AA7A8E871F9AA41700B8CF40 /* PullRequestCell.swift in Sources */,
 				AA7A8E661F9A6EBF00B8CF40 /* PullRequestsVC.swift in Sources */,
 				AA7A8E8E1F9AC28900B8CF40 /* UIExtensions.swift in Sources */,
+				AAB370EE1F9BB829004E823E /* DiffVC.swift in Sources */,
 				AA7A8E7D1F9A77E400B8CF40 /* GithubAPI.swift in Sources */,
 				AA7A8E831F9A79C500B8CF40 /* User.swift in Sources */,
 				AA7A8E811F9A799C00B8CF40 /* Repo.swift in Sources */,

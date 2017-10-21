@@ -21,6 +21,14 @@ class PullRequestsVC: UITableViewController {
         loadPullRequests()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        title = "" // Remove title from next VC back button
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        title = "Pull Requests" // Put title back
+    }
+    
     private func registerCell() {
         tableView.register(
             PullRequestCell.self,
@@ -68,6 +76,15 @@ extension PullRequestsVC {
         pullRequestVM.updateCell(cell)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let diffVC = DiffVC()
+        diffVC.pullRequest = pullRequests[indexPath.row]
+        navigationController?.pushViewController(
+            diffVC,
+            animated: true
+        )
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
