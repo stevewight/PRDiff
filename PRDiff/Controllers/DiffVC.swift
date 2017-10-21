@@ -17,6 +17,7 @@ class DiffVC: UITableViewController {
         view.backgroundColor = .white
         registerCell()
         setTitle()
+        loadDiff()
     }
 
     private func setTitle() {
@@ -32,6 +33,27 @@ class DiffVC: UITableViewController {
             DiffCell.self,
             forCellReuseIdentifier: "DiffCell"
         )
+    }
+    
+    private func loadDiff() {
+        guard let url = pullRequest?.diffURL else { return }
+        let githubAPI = GithubAPI()
+        githubAPI.diff(url:url) { lines, errorMsg in
+            if errorMsg == "" {
+                // TODO: parse raw lines into Diff
+                self.updateUI()
+            } else {
+                self.presentErrorMsg(errorMsg)
+            }
+        }
+    }
+    
+    private func updateUI() {
+        print("updating UI")
+    }
+    
+    private func presentErrorMsg(_ errorMsg:String) {
+        print("error msg: \(errorMsg)")
     }
     
 }

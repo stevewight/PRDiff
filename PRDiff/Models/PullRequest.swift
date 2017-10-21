@@ -13,10 +13,12 @@ struct PullRequest:Decodable {
     let body:String
     let number:Int
     let createdAt:Date
+    let diffURL:URL
     let user:User
     
     enum CodingKeys: String, CodingKey {
         case title, body, number, user
         case createdAt = "created_at"
+        case diffURL = "diff_url"
     }
 }

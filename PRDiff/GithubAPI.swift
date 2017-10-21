@@ -11,7 +11,7 @@ import UIKit
 class GithubAPI: NSObject {
     
     let baseURL = "https://api.github.com/"
-    let session = URLSession(configuration: .default)
+    let session = URLSession.shared
     var dataTask: URLSessionDataTask?
     var errorMsg = ""
     
@@ -36,6 +36,17 @@ class GithubAPI: NSObject {
         dataTask?.resume()
     }
     
+    public func diff(url:URL,complete:@escaping (_ lines:[String],_ errorMsg:String)->Void) {
+        dataTask = session.dataTask(with: url) { data, response, error in
+            guard let diffData = data else {
+                self.errorMsg = "Error: could not load diff data"
+                return
+            }
+            complete(self.buildLines(data:diffData),self.errorMsg)
+        }
+        dataTask?.resume()
+    }
+    
     private func decodePullRequestData(_ data:Data)->[PullRequest] {
         var pullRequests = [PullRequest]()
         do {
@@ -49,6 +60,12 @@ class GithubAPI: NSObject {
             errorMsg = "Error: could not decode JSON"
         }
         return pullRequests
+    }
+    
+    private func buildLines(data:Data)->[String] {
+        let diffString = String(data:data,encoding:.utf8)
+        let lines = diffString?.components(separatedBy: "\n")
+        return lines!
     }
     
 }
