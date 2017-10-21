@@ -18,6 +18,8 @@
 		AA7A8E871F9AA41700B8CF40 /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E861F9AA41700B8CF40 /* PullRequestCell.swift */; };
 		AA7A8E891F9AAF1500B8CF40 /* PullRequestStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E881F9AAF1500B8CF40 /* PullRequestStack.swift */; };
 		AA7A8E8B1F9AB03100B8CF40 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8A1F9AB03100B8CF40 /* AvatarImageView.swift */; };
+		AA7A8E8E1F9AC28900B8CF40 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8D1F9AC28900B8CF40 /* UIExtensions.swift */; };
+		AA7A8E901F9AC2F900B8CF40 /* PullRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		AA7A8E861F9AA41700B8CF40 /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCell.swift; sourceTree = "<group>"; };
 		AA7A8E881F9AAF1500B8CF40 /* PullRequestStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestStack.swift; sourceTree = "<group>"; };
 		AA7A8E8A1F9AB03100B8CF40 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		AA7A8E8D1F9AC28900B8CF40 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				AA7A8E761F9A71DC00B8CF40 /* Views */,
 				AA7A8E781F9A71F000B8CF40 /* ViewModels */,
 				AA7A8E771F9A71E200B8CF40 /* Controllers */,
+				AA7A8E8C1F9AC24300B8CF40 /* Extensions */,
 				AA7A8E6A1F9A6EBF00B8CF40 /* Assets.xcassets */,
 				AA7A8E6C1F9A6EBF00B8CF40 /* LaunchScreen.storyboard */,
 				AA7A8E6F1F9A6EBF00B8CF40 /* Info.plist */,
@@ -110,8 +115,17 @@
 		AA7A8E781F9A71F000B8CF40 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA7A8E8C1F9AC24300B8CF40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA7A8E8D1F9AC28900B8CF40 /* UIExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7A8E901F9AC2F900B8CF40 /* PullRequestVM.swift in Sources */,
 				AA7A8E8B1F9AB03100B8CF40 /* AvatarImageView.swift in Sources */,
 				AA7A8E871F9AA41700B8CF40 /* PullRequestCell.swift in Sources */,
 				AA7A8E661F9A6EBF00B8CF40 /* PullRequestsVC.swift in Sources */,
+				AA7A8E8E1F9AC28900B8CF40 /* UIExtensions.swift in Sources */,
 				AA7A8E7D1F9A77E400B8CF40 /* GithubAPI.swift in Sources */,
 				AA7A8E831F9A79C500B8CF40 /* User.swift in Sources */,
 				AA7A8E811F9A799C00B8CF40 /* Repo.swift in Sources */,

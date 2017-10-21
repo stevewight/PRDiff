@@ -41,6 +41,10 @@ class PullRequestCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func stopActivity() {
+        avatarImageView.stopActivity()
+    }
+    
     // MARK: view setup methods
     
     private func setUpStack() {
