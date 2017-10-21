@@ -22,6 +22,8 @@
 		AA7A8E901F9AC2F900B8CF40 /* PullRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */; };
 		AAB370EE1F9BB829004E823E /* DiffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370ED1F9BB829004E823E /* DiffVC.swift */; };
 		AAB370F01F9BBB40004E823E /* DiffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370EF1F9BBB40004E823E /* DiffCell.swift */; };
+		AAB370F61F9BF8C6004E823E /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370F51F9BF8C6004E823E /* Diff.swift */; };
+		AAB370F81F9BF8F4004E823E /* DiffParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370F71F9BF8F4004E823E /* DiffParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		AA7A8E8F1F9AC2F900B8CF40 /* PullRequestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestVM.swift; sourceTree = "<group>"; };
 		AAB370ED1F9BB829004E823E /* DiffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffVC.swift; sourceTree = "<group>"; };
 		AAB370EF1F9BBB40004E823E /* DiffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffCell.swift; sourceTree = "<group>"; };
+		AAB370F51F9BF8C6004E823E /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
+		AAB370F71F9BF8F4004E823E /* DiffParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				AA7A8E7E1F9A798400B8CF40 /* PullRequest.swift */,
 				AA7A8E821F9A79C500B8CF40 /* User.swift */,
 				AA7A8E801F9A799C00B8CF40 /* Repo.swift */,
+				AAB370F51F9BF8C6004E823E /* Diff.swift */,
+				AAB370F71F9BF8F4004E823E /* DiffParser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB370F61F9BF8C6004E823E /* Diff.swift in Sources */,
 				AAB370F01F9BBB40004E823E /* DiffCell.swift in Sources */,
 				AA7A8E901F9AC2F900B8CF40 /* PullRequestVM.swift in Sources */,
+				AAB370F81F9BF8F4004E823E /* DiffParser.swift in Sources */,
 				AA7A8E8B1F9AB03100B8CF40 /* AvatarImageView.swift in Sources */,
 				AA7A8E871F9AA41700B8CF40 /* PullRequestCell.swift in Sources */,
 				AA7A8E661F9A6EBF00B8CF40 /* PullRequestsVC.swift in Sources */,

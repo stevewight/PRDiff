@@ -33,3 +33,13 @@ extension UIImageView {
     }
     
 }
+
+extension String {
+    func slice(from: String, to: String) -> String? {
+        return (range(of: from)?.upperBound).flatMap { subFrom in
+            (range(of: to, range: subFrom..<endIndex)?.lowerBound).map { subTo in
+                String(self[subFrom..<subTo])
+            }
+        }
+    }
+}

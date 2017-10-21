@@ -11,6 +11,7 @@ import UIKit
 class DiffVC: UITableViewController {
 
     var pullRequest:PullRequest?
+    var diff:Diff?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class DiffVC: UITableViewController {
         let githubAPI = GithubAPI()
         githubAPI.diff(url:url) { lines, errorMsg in
             if errorMsg == "" {
-                // TODO: parse raw lines into Diff
+                self.diff = Diff(rawLines: lines)
                 self.updateUI()
             } else {
                 self.presentErrorMsg(errorMsg)
