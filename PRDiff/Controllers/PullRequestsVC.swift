@@ -16,6 +16,7 @@ class PullRequestsVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.prompt = "\(repo.name)/\(repo.owner)"
         title = "Pull Requests"
         registerCell()
         loadPullRequests()

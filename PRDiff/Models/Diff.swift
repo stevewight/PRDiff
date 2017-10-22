@@ -11,6 +11,11 @@ import UIKit
 class Diff: NSObject {
     
     var files = [DiffFile]()
+    var lines = [DiffLine]()
+    
+    override init() {
+        super.init()
+    }
     
     init(rawLines:[String]) {
         super.init()
@@ -20,8 +25,7 @@ class Diff: NSObject {
     private func parseLines(_ rawLines:[String]) {
         let parser = DiffParser(rawLines: rawLines)
         files = parser.files
-        print("file count: \(files.count)")
-        print("files: \(files)")
+        lines = parser.allLines
     }
 }
 

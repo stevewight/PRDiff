@@ -15,6 +15,7 @@ class DiffParser: NSObject {
     // * Use DiffBlock metaData to iterate into DiffLines
     
     var rawLines = [String]()
+    var allLines = [DiffLine]()
     var files = [DiffFile]()
     
     init(rawLines:[String]) {
@@ -62,6 +63,7 @@ class DiffParser: NSObject {
             endIndex += addLine.numberofLines
         }
         let lines = buildLines(start:startIndex,end:endIndex)
+        allLines += lines
         
         return DiffBlock(
             rawTitle: line,

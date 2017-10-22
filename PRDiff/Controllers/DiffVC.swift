@@ -11,7 +11,7 @@ import UIKit
 class DiffVC: UITableViewController {
 
     var pullRequest:PullRequest?
-    var diff:Diff?
+    var diff = Diff()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,10 @@ class DiffVC: UITableViewController {
     }
     
     private func updateUI() {
-        print("updating UI")
+        //update UI on main queue
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     private func presentErrorMsg(_ errorMsg:String) {
@@ -65,25 +68,45 @@ extension DiffVC {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let line = diff.lines[indexPath.row]
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "DiffCell", for: indexPath
         ) as! DiffCell
         
-        //TODO: DiffLine to cell
-        cell.leftNumLabel.text = "3"
-        cell.leftBodyLabel.text = "Test data"
-        cell.rightNumLabel.text = "33"
-        cell.rightBodyLabel.text = "Longer test data is longer"
+        cell.leftBodyLabel.text = line.body
+        cell.leftNumLabel.text = " "
+        cell.stack.rightStack.isHidden = true
+        cell.backgroundColor = cellColor(line: line)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100 //TODO: get count from Diff
+        return diff.lines.count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 //TODO: get count of DiffFiles
+        return 1
+    }
+    
+    private func cellColor(line:DiffLine)->UIColor {
+        if line.operation == .addition {
+            return UIColor(
+                red: 0.0,
+                green: 1.0,
+                blue: 0.0,
+                alpha: 0.25
+            )
+        } else if line.operation == .deletion {
+            return UIColor(
+                red: 1.0,
+                green: 0.0,
+                blue: 0.0,
+                alpha: 0.25
+            )
+        } else {
+            return .white
+        }
     }
     
 }
