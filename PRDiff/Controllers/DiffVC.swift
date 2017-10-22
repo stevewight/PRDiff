@@ -16,6 +16,8 @@ class DiffVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 24.0
         registerCell()
         setTitle()
         loadDiff()
@@ -68,6 +70,10 @@ extension DiffVC {
         ) as! DiffCell
         
         //TODO: DiffLine to cell
+        cell.leftNumLabel.text = "3"
+        cell.leftBodyLabel.text = "Test data"
+        cell.rightNumLabel.text = "33"
+        cell.rightBodyLabel.text = "Longer test data is longer"
         
         return cell
     }
@@ -78,10 +84,6 @@ extension DiffVC {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1 //TODO: get count of DiffFiles
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 24.0
     }
     
 }

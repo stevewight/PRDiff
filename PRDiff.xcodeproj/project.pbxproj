@@ -24,6 +24,7 @@
 		AAB370F01F9BBB40004E823E /* DiffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370EF1F9BBB40004E823E /* DiffCell.swift */; };
 		AAB370F61F9BF8C6004E823E /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370F51F9BF8C6004E823E /* Diff.swift */; };
 		AAB370F81F9BF8F4004E823E /* DiffParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370F71F9BF8F4004E823E /* DiffParser.swift */; };
+		AAB370FC1F9C3EAD004E823E /* DiffStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB370FB1F9C3EAD004E823E /* DiffStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AAB370EF1F9BBB40004E823E /* DiffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffCell.swift; sourceTree = "<group>"; };
 		AAB370F51F9BF8C6004E823E /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
 		AAB370F71F9BF8F4004E823E /* DiffParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffParser.swift; sourceTree = "<group>"; };
+		AAB370FB1F9C3EAD004E823E /* DiffStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				AA7A8E881F9AAF1500B8CF40 /* PullRequestStack.swift */,
 				AA7A8E8A1F9AB03100B8CF40 /* AvatarImageView.swift */,
 				AAB370EF1F9BBB40004E823E /* DiffCell.swift */,
+				AAB370FB1F9C3EAD004E823E /* DiffStack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				AA7A8E661F9A6EBF00B8CF40 /* PullRequestsVC.swift in Sources */,
 				AA7A8E8E1F9AC28900B8CF40 /* UIExtensions.swift in Sources */,
 				AAB370EE1F9BB829004E823E /* DiffVC.swift in Sources */,
+				AAB370FC1F9C3EAD004E823E /* DiffStack.swift in Sources */,
 				AA7A8E7D1F9A77E400B8CF40 /* GithubAPI.swift in Sources */,
 				AA7A8E831F9A79C500B8CF40 /* User.swift in Sources */,
 				AA7A8E811F9A799C00B8CF40 /* Repo.swift in Sources */,
