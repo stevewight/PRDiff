@@ -1,6 +1,4 @@
 # PRDiff 
-<p>Hello 🙂 Procore</p>
-This was an interesting challenge and I enjoyed getting a chance to work with the Github API!  There were additional things I would have loved to do given more time.
 
 ## Goal of the app
 - List all Pull Requests for a given repo
@@ -64,6 +62,3 @@ Additional things that could be done with more time on the project:
   - Something similar to Alamofires URLRequestConvertable for routing
 - More animations and UI enhancements
 - etc...  
-
-## Thanks! 😁
-For taking the time to look over my code and any feedback is appreciated.  It would be great to chat more about my approach and answer any questions you might have!
